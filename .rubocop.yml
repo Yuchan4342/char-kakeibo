@@ -14,10 +14,6 @@ AllCops:
     - 'railties/test/fixtures/tmp/**/*'
     - 'node_modules/**/*'
 
-Performance:
-  Exclude:
-    - '**/test/**/*'
-
 AsciiComments:
   Enabled: false
 
