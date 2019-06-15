@@ -13,7 +13,7 @@ class PurchasesController < ApplicationController
 
   def create
     # エラー時の render 用に、@purchase を作成しておく.
-    @purchase = Purchase.new(params[:purchase])
+    @purchase = Purchase.new(purchase_params)
     respond_to do |format|
       if @purchase.save
         format.html do
@@ -23,5 +23,13 @@ class PurchasesController < ApplicationController
         format.html { render :new }
       end
     end
+  end
+
+  private
+
+  def purchase_params
+    purchase_params = params[:purchase]&.permit!
+    purchase_params['bought_at'] = purchase_params['bought_at(1i)']
+    purchase_params
   end
 end
