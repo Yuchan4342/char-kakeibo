@@ -1,7 +1,7 @@
 <%# new: 新規作成かどうか表す boolean. %>
 <% new ||= false %>
 <%= simple_form_for @purchase do |f| %>
-  <%= f.input :bought_at %>
+  <%= f.input :bought_at, discard_hour: true, discard_minute: true %>
   <%= f.input :name %>
   <%= f.input :price %>
   <%= f.button :submit %>
