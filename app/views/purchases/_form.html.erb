@@ -1,7 +1,8 @@
 <%# new: 新規作成かどうか表す boolean. %>
 <% new ||= false %>
 <%= simple_form_for @purchase do |f| %>
-  <%= f.input :bought_at, label: t('activerecord.attributes.purchase.bought_at'), discard_hour: true, discard_minute: true %>
+  <%= f.input :bought_at, label: t('activerecord.attributes.purchase.bought_at', default: 'Date'),
+  discard_hour: true, discard_minute: true %>
   <%= f.input :name, label: t('activerecord.attributes.purchase.name') %>
   <%= f.input :price, label: t('activerecord.attributes.purchase.price') %>
   <%= f.button :submit %>
