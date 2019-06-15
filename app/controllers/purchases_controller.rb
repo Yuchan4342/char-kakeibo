@@ -16,9 +16,7 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new(purchase_params)
     respond_to do |format|
       if @purchase.save
-        format.html do
-          redirect_to @purchase, notice: 'Purchase was successfully created.'
-        end
+        format.html { render :index }
       else
         format.html { render :new }
       end
@@ -30,6 +28,8 @@ class PurchasesController < ApplicationController
   def purchase_params
     purchase_params = params[:purchase]&.permit!
     purchase_params['bought_at'] = purchase_params['bought_at(1i)']
+    purchase_params['bought_at'] << '-'
+    purchase_params['bought_at'] << purchase_params['bought_at(2i)']
     purchase_params
   end
 end
