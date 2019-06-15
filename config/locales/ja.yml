@@ -31,6 +31,13 @@
 
 ja:
   activerecord:
+    models: &association_names
+      purchase: 取引
+    attributes:
+      purchase:
+        bought_at: 日付
+        name: 名前
+        price: 値段
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
