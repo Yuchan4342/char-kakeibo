@@ -1,4 +1,6 @@
 {
     "ruby.rubocop.executePath": "",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    // ワークベンチで使用するアイコンのテーマを指定します。'null' を指定するとファイル アイコンが表示されなくなります。
+    "workbench.iconTheme": "vscode-icons",
 }
