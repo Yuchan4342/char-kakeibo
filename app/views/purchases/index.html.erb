@@ -12,7 +12,7 @@
 </tr>
 <% @purchases.each do |purchase| %>
 <tr>
-<th><%= purchase.bought_at %></th>
+<th><%= l(purchase.bought_at.to_date, format: :long) %></th>
 <th><%= purchase.name %></th>
 <th>¥<%= purchase.price %></th>
 <th>
