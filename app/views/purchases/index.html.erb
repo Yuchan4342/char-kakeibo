@@ -1,16 +1,30 @@
-<h1>Purchase#index</h1>
-<p>Find me in app/views/purchase/index.html.erb</p>
+<h1>家計簿</h1>
+<%= link_to(new_purchase_path) do %>
+<span>新規取引</span>
+<% end %>
 <table border="1">
 <tr>
 <th>日付</th>
 <th>名前</th>
 <th>値段</th>
+<th></th>
+<th></th>
 </tr>
 <% @purchases.each do |purchase| %>
 <tr>
 <th><%= purchase.bought_at %></th>
 <th><%= purchase.name %></th>
 <th>¥<%= purchase.price %></th>
+<th>
+<%= link_to(edit_purchase_path(purchase)) do %>
+<span>編集</span>
+<% end %>
+</th>
+<th>
+<%= link_to(purchase, method: :delete, data: { confirm: '削除しますか?' }) do %>
+<span>削除</span>
+<% end %>
+</th>
 </tr>
 <% end %>
 </table>
