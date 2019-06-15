@@ -186,12 +186,12 @@ en:
     currency:
       format:
         delimiter: ","
-        format: "%u%n"
-        precision: 2
+        format: "%n%u"
+        precision: 0
         separator: "."
         significant: false
         strip_insignificant_zeros: false
-        unit: "$"
+        unit: "JPY"
     format:
       delimiter: ","
       precision: 3

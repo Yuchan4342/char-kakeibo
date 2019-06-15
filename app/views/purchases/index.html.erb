@@ -14,7 +14,7 @@
 <tr>
 <th><%= l(purchase.bought_at.to_date, format: :long) %></th>
 <th><%= purchase.name %></th>
-<th>¥<%= purchase.price %></th>
+<th><%= number_to_currency(purchase.price) %></th>
 <th>
 <%= link_to(edit_purchase_path(purchase)) do %>
 <span>編集</span>
