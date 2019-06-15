@@ -1,2 +1,7 @@
 <h1>Purchase#index</h1>
 <p>Find me in app/views/purchase/index.html.erb</p>
+<% @purchases.each do |purchase| %>
+<p><%= purchase.bought_at %></p>
+<p><%= purchase.name %></p>
+<p><%= purchase.price %></p>
+<% end %>
