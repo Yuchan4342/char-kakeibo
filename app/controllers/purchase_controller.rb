@@ -8,6 +8,6 @@ class PurchaseController < ApplicationController
   end
 
   def new
-    @purchases = Purchase.new
+    @purchase = Purchase.new
   end
 end

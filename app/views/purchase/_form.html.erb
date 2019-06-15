@@ -1,0 +1,7 @@
+<%# new: 新規作成かどうか表す boolean. %>
+<% new ||= false %>
+<%= simple_form_for @purchase do |f| %>
+  <%= f.input :bought_at %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+<% end %>
