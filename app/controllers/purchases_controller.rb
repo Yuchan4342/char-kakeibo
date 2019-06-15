@@ -16,7 +16,7 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new(purchase_params)
     respond_to do |format|
       if @purchase.save
-        format.html { render :index }
+        format.html { redirect_to purchases_path }
       else
         format.html { render :new }
       end
