@@ -66,3 +66,5 @@ end
 
 # モデルのカラム情報追加
 gem 'annotate'
+# form をすっきりさせる.
+gem 'simple_form'
