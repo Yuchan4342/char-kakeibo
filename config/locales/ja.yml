@@ -27,6 +27,7 @@ ja:
   purchases:
     index:
       <<: *view_common
+      purchases: 取引記録
       new_purchase: 新規取引
     new:
       <<: *view_common
