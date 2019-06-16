@@ -2,7 +2,7 @@
 
 # CategoriesController
 # カテゴリー Categories に関連する Controller.
-class CategoriessController < ApplicationController
+class CategoriesController < ApplicationController
   before_action :set_category, only: %i[edit update destroy]
 
   def index
@@ -10,7 +10,7 @@ class CategoriessController < ApplicationController
   end
 
   def new
-    @category = Category.new(price: 0)
+    @category = Category.new
   end
 
   def edit; end
