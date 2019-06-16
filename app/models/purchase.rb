@@ -14,4 +14,5 @@
 
 # Purchase model. 購入などの取引を表すモデル.
 class Purchase < ApplicationRecord
+  validates :price, presence: true
 end
