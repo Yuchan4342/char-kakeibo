@@ -1,7 +1,11 @@
-<h1><%= t('.new_purchase') %></h1>
-<div>
-<%= render partial: 'form', locals: {new: true} %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= t('.new_purchase') %></h1>
+      <%= render partial: 'form', locals: {new: true} %>
+      <%= link_to(purchases_path) do %>
+      <span class="btn btn-primary"><%= t('.action.back') %></span>
+      <% end %>
+    </div>
+  </div>
 </div>
-<%= link_to(purchases_path) do %>
-<span class="btn btn-primary"><%= t('.action.back') %></span>
-<% end %>
