@@ -1,5 +1,13 @@
-<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+<nav class='navbar navbar-dark bg-success navbar-fixed-top'>
   <div class="container-fluid">
-    <h1><a class='text-dark' href='<%= root_path %>'><%= t('title') %></a></h1>
+    <a class='navbar-brand' href='<%= root_path %>'><%= t('title') %></a>
+    
+    <%# navbar の左側. %>
+    <div class='navbar-nav mr-auto'>
+      <%= link_to(Purchase.model_name.human, purchases_path, class: 'nav-item nav-link') %>
+    </div>
+    <%# navbar の右側. %>
+    <div class='navbar-nav'>
+    </div>
   </div>
 </nav>
