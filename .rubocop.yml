@@ -20,6 +20,9 @@ AsciiComments:
 Rails:
   Enabled: true
 
+Metrics/MethodLength:
+  Max: 15
+
 Style/ExpandPathArguments:
   Exclude:
     - 'bin/**'
