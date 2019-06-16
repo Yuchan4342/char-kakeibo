@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= render partial: 'layouts/navbar' %>
+
     <% if notice %>
       <div class="alert alert-success"><%= simple_format(h(notice)) %></div>
     <% end %>
