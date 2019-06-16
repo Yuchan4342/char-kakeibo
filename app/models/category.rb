@@ -2,16 +2,14 @@
 
 # == Schema Information
 #
-# Table name: purchases
+# Table name: categories
 #
 #  id         :bigint           not null, primary key
 #  name       :string
-#  price      :integer
-#  bought_at  :datetime
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-# Purchase model. 購入などの取引を表すモデル.
-class Purchase < ApplicationRecord
+# Category model. 費目を表すモデル.
+class Category < ApplicationRecord
 end
