@@ -1,6 +1,6 @@
-<h1>家計簿</h1>
+<h1><%= t('title') %></h1>
 <%= link_to(new_purchase_path) do %>
-<span>新規取引</span>
+<span><%= t('.action.new') %></span>
 <% end %>
 <table border="1">
 <tr>
@@ -17,12 +17,12 @@
 <th><%= number_to_currency(purchase.price) %></th>
 <th>
 <%= link_to(edit_purchase_path(purchase)) do %>
-<span>編集</span>
+<span><%= t('.action.edit') %></span>
 <% end %>
 </th>
 <th>
 <%= link_to(purchase, method: :delete, data: { confirm: '削除しますか?' }) do %>
-<span>削除</span>
+<span><%= t('.action.delete') %></span>
 <% end %>
 </th>
 </tr>

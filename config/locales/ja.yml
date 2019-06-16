@@ -1,35 +1,15 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
+view_common: &view_common
+  actions: 操作
+  action: &action_common
+    new: 新規取引
+    show: 詳細
+    edit: 編集
+    delete: 削除
+    back: 戻る
+    next: 次へ
 
 ja:
+  title: 家計簿
   activerecord:
     models: &association_names
       purchase: 取引
@@ -44,6 +24,9 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+  purchases:
+    index:
+      <<: *view_common
   date:
     abbr_day_names:
     - 日
