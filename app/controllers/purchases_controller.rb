@@ -21,8 +21,9 @@ class PurchasesController < ApplicationController
     respond_to do |format|
       if @purchase.save
         format.html do
-          redirect_to purchases_path,
-                      notice: 'Purchase was successfully created.'
+          redirect_to(purchases_path,
+                      notice: t('.successfully_created',
+                                default: 'Purchase was successfully created.'))
         end
       else
         format.html { render :new }
@@ -34,8 +35,9 @@ class PurchasesController < ApplicationController
     respond_to do |format|
       if @purchase.update(purchase_params)
         format.html do
-          redirect_to purchases_path,
-                      notice: 'Purchase was successfully updated.'
+          redirect_to(purchases_path,
+                      notice: t('.successfully_updated',
+                                default: 'Purchase was successfully updated.'))
         end
       else
         format.html { render :edit }
@@ -47,8 +49,9 @@ class PurchasesController < ApplicationController
     @purchase.destroy
     respond_to do |format|
       format.html do
-        redirect_to purchases_path,
-                    notice: 'Purchase was successfully destroyed.'
+        redirect_to(purchases_path,
+                    notice: t('.successfully_destroyed',
+                              default: 'Purchase was successfully destroyed.'))
       end
     end
   end

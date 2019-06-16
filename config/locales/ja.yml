@@ -34,9 +34,15 @@ ja:
     new:
       <<: *view_common
       new_category: 新規作成
+    create:
+      successfully_created: カテゴリーの作成が完了しました。
     edit:
       <<: *view_common
       edit_category: カテゴリーの編集
+    update:
+      successfully_updated: カテゴリーの更新が完了しました。
+    destroy:
+      successfully_destroyed: カテゴリーの削除が完了しました。
   purchases:
     index:
       <<: *view_common
@@ -45,9 +51,15 @@ ja:
     new:
       <<: *view_common
       new_purchase: 新規取引
+    create:
+      successfully_created: 取引の作成が完了しました。
     edit:
       <<: *view_common
       edit_purchase: 取引の編集
+    update:
+      successfully_updated: 取引の更新が完了しました。
+    destroy:
+      successfully_destroyed: 取引の削除が完了しました。
   date:
     abbr_day_names:
     - 日

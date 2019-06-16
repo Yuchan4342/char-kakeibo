@@ -21,8 +21,9 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       if @category.save
         format.html do
-          redirect_to categories_path,
-                      notice: 'Category was successfully created.'
+          redirect_to(categories_path,
+                      notice: t('.successfully_created',
+                                default: 'Category was successfully created.'))
         end
       else
         format.html { render :new }
@@ -34,8 +35,9 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       if @category.update(category_params)
         format.html do
-          redirect_to categories_path,
-                      notice: 'Category was successfully updated.'
+          redirect_to(categories_path,
+                      notice: t('.successfully_updated',
+                                default: 'Category was successfully updated.'))
         end
       else
         format.html { render :edit }
@@ -47,8 +49,9 @@ class CategoriesController < ApplicationController
     @category.destroy
     respond_to do |format|
       format.html do
-        redirect_to categories_path,
-                    notice: 'Category was successfully destroyed.'
+        redirect_to(categories_path,
+                    notice: t('.successfully_destroyed',
+                              default: 'Category was successfully destroyed.'))
       end
     end
   end
