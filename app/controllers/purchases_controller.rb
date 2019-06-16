@@ -10,7 +10,7 @@ class PurchasesController < ApplicationController
   end
 
   def new
-    @purchase = Purchase.new
+    @purchase = Purchase.new(price: 0)
   end
 
   def edit; end
