@@ -4,7 +4,14 @@
     
     <%# navbar の左側. %>
     <div class='navbar-nav mr-auto'>
-      <%= link_to(Purchase.model_name.human, purchases_path, class: 'nav-item nav-link') %>
+      <ul class='list-inline'>
+        <li class='list-inline-item'>
+          <%= link_to(Purchase.model_name.human, purchases_path, class: 'nav-item nav-link') %>
+        </li>
+        <li class='list-inline-item'>
+          <%= link_to(Category.model_name.human, categories_path, class: 'nav-item nav-link') %>
+        </li>
+      </ul>
     </div>
     <%# navbar の右側. %>
     <div class='navbar-nav'>
