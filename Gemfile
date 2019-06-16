@@ -68,3 +68,5 @@ end
 gem 'annotate'
 # form をすっきりさせる.
 gem 'simple_form'
+# Bootstrap
+gem 'bootstrap', '~> 4.3.1'
