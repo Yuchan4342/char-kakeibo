@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       if @category.save
         format.html do
-          redirect_to category_path,
+          redirect_to categories_path,
                       notice: 'Category was successfully created.'
         end
       else
@@ -34,7 +34,7 @@ class CategoriesController < ApplicationController
     respond_to do |format|
       if @category.update(category_params)
         format.html do
-          redirect_to category_path,
+          redirect_to categories_path,
                       notice: 'Category was successfully updated.'
         end
       else
@@ -47,7 +47,7 @@ class CategoriesController < ApplicationController
     @category.destroy
     respond_to do |format|
       format.html do
-        redirect_to category_path,
+        redirect_to categories_path,
                     notice: 'Category was successfully destroyed.'
       end
     end
