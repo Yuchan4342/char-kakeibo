@@ -6,7 +6,7 @@ class PurchasesController < ApplicationController
   before_action :set_purchase, only: %i[edit update destroy]
 
   def index
-    @purchases = Purchase.all
+    @purchases = Purchase.all.order('bought_at DESC')
   end
 
   def new
