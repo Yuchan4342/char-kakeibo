@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CharKakeibo</title>
+    <title>家計簿</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,17 @@
   </head>
 
   <body>
+    <% if notice %>
+      <div class="alert alert-success"><%= simple_format(h(notice)) %></div>
+    <% end %>
     <%= yield %>
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="pull-right">Copyright &copy; Yuto Iwata</div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

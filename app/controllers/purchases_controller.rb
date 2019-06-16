@@ -20,7 +20,10 @@ class PurchasesController < ApplicationController
     @purchase = Purchase.new(purchase_params)
     respond_to do |format|
       if @purchase.save
-        format.html { redirect_to purchases_path }
+        format.html do
+          redirect_to purchases_path,
+                      notice: 'Purchase was successfully created.'
+        end
       else
         format.html { render :new }
       end
