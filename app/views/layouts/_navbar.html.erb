@@ -1,15 +1,18 @@
-<nav class='navbar navbar-dark bg-success navbar-fixed-top'>
+<nav class='navbar navbar-expand-lg navbar-dark bg-success navbar-fixed-top'>
   <div class="container-fluid">
     <a class='navbar-brand' href='<%= root_path %>'><%= t('title') %></a>
-    
+    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="ナビゲーションの切替">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <%# navbar の左側. %>
-    <div class='navbar-nav mr-auto'>
-      <ul class='list-inline'>
-        <li class='list-inline-item'>
-          <%= link_to(Purchase.model_name.human, purchases_path, class: 'nav-item nav-link') %>
+    <div class='collapse navbar-collapse' id='navbarNav'>
+      <ul class='navbar-nav'>
+        <li class='nav-item'>
+          <%= link_to(Purchase.model_name.human, purchases_path, class: 'nav-link') %>
         </li>
-        <li class='list-inline-item'>
-          <%= link_to(Category.model_name.human, categories_path, class: 'nav-item nav-link') %>
+        <li class='nav-item'>
+          <%= link_to(Category.model_name.human, categories_path, class: 'nav-link') %>
         </li>
       </ul>
     </div>
