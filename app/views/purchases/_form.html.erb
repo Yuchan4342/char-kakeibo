@@ -4,6 +4,8 @@
   <%= f.input :bought_at, label: Purchase.human_attribute_name('bought_at'),
   discard_hour: true, discard_minute: true %>
   <%= f.input :name, label: Purchase.human_attribute_name('name') %>
-  <%= f.input :price, label: Purchase.human_attribute_name('price') %>
-  <%= f.button :submit, class: 'btn-primary' %>
+  <%= f.input :price, as: :string, label: Purchase.human_attribute_name('price') << ' ¥' %>
+  <div class='form-group form-actions' >
+    <%= f.button :submit, class: 'btn-primary' %>
+  </div>
 <% end %>
