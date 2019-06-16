@@ -1,14 +1,22 @@
 <%# new: 新規作成かどうか表す boolean. %>
 <% new ||= false %>
 <%= simple_form_for @purchase, html: { class: 'form-horizontal' } do |f| %>
-  <%= f.input :bought_at, label: Purchase.human_attribute_name('bought_at'),
-  discard_hour: true, discard_minute: true,
-  # 範囲を 1970年から来年までに指定.
-  start_year: 1970, end_year: Date.today.year + 1 %>
-  <%= f.association :category, label: Category.model_name.human %>
-  <%= f.input :name, label: Purchase.human_attribute_name('name') %>
-  <%= f.input :price, as: :string, label: Purchase.human_attribute_name('price') << ' ¥' %>
-  <div class='form-group form-actions' >
+  <div class='form-group'>
+    <%= f.input :bought_at, label: Purchase.human_attribute_name('bought_at'),
+    discard_hour: true, discard_minute: true,
+    # 範囲を 1970年から来年までに指定.
+    start_year: 1970, end_year: Date.today.year + 1 %>
+  </div>
+  <div class='form-group'>
+    <%= f.association :category, label: Category.model_name.human %>
+  </div>
+  <div class='form-group'>
+    <%= f.input :name, label: Purchase.human_attribute_name('name') %>
+  </div>
+  <div class='form-group'>
+    <%= f.input :price, as: :string, label: Purchase.human_attribute_name('price') << ' ¥' %>
+  </div>
+  <div class='form-group form-actions'>
     <%= f.button :submit, class: 'btn-primary' %>
   </div>
 <% end %>
