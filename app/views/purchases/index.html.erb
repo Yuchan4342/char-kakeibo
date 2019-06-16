@@ -11,6 +11,7 @@
         <thead>
           <tr>
             <th><%= Purchase.human_attribute_name('bought_at') %></th>
+            <th><%= Category.model_name.human %></th>
             <th><%= Purchase.human_attribute_name('name') %></th>
             <th><%= Purchase.human_attribute_name('price') %></th>
             <th><%= t('.actions') %></th>
@@ -20,6 +21,7 @@
           <% @purchases.each do |purchase| %>
             <tr>
             <th><%= l(purchase.bought_at.to_date, format: :long) %></th>
+            <th><%= purchase.category %></th>
             <th><%= purchase.name %></th>
             <th><%= number_to_currency(purchase.price) %></th>
             <th>
