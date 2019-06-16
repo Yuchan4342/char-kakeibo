@@ -13,8 +13,7 @@
             <th><%= Purchase.human_attribute_name('bought_at') %></th>
             <th><%= Purchase.human_attribute_name('name') %></th>
             <th><%= Purchase.human_attribute_name('price') %></th>
-            <th></th>
-            <th></th>
+            <th><%= t('.actions') %></th>
           </tr>
         </thead>
         <tbody>
@@ -27,8 +26,6 @@
               <%= link_to(edit_purchase_path(purchase)) do %>
               <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
               <% end %>
-            </th>
-            <th>
               <%= link_to(purchase, method: :delete, data: { confirm: '削除しますか?' }) do %>
               <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
               <% end %>

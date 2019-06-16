@@ -11,8 +11,7 @@
         <thead>
           <tr>
             <th><%= Category.human_attribute_name('name') %></th>
-            <th></th>
-            <th></th>
+            <th><%= t('.actions') %></th>
           </tr>
         </thead>
         <tbody>
@@ -23,8 +22,6 @@
               <%= link_to(edit_category_path(category)) do %>
               <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
               <% end %>
-            </th>
-            <th>
               <%= link_to(category, method: :delete, data: { confirm: '削除しますか?' }) do %>
               <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
               <% end %>
