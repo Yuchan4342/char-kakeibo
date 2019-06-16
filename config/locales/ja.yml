@@ -1,7 +1,7 @@
 view_common: &view_common
   actions: 操作
   action: &action_common
-    new: 新規取引
+    new: 新規
     show: 詳細
     edit: 編集
     delete: 削除
@@ -27,6 +27,9 @@ ja:
   purchases:
     index:
       <<: *view_common
+      new_purchase: 新規取引
+    new: { <<: *view_common }
+    edit: { <<: *view_common }
   date:
     abbr_day_names:
     - 日

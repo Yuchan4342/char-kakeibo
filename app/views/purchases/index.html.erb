@@ -1,12 +1,12 @@
 <h1><%= t('title') %></h1>
 <%= link_to(new_purchase_path) do %>
-<span><%= t('.action.new') %></span>
+<span><%= t('.new_purchase') %></span>
 <% end %>
 <table border="1">
 <tr>
-<th><%= t('activerecord.attributes.purchase.bought_at', default: 'Date') %></th>
-<th><%= t('activerecord.attributes.purchase.name') %></th>
-<th><%= t('activerecord.attributes.purchase.price') %></th>
+<th><%= Purchase.human_attribute_name('bought_at') %></th>
+<th><%= Purchase.human_attribute_name('name') %></th>
+<th><%= Purchase.human_attribute_name('price') %></th>
 <th></th>
 <th></th>
 </tr>
