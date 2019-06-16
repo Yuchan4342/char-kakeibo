@@ -5,6 +5,7 @@
   discard_hour: true, discard_minute: true,
   # 範囲を 1970年から来年までに指定.
   start_year: 1970, end_year: Date.today.year + 1 %>
+  <%= f.association :category, label: Category.model_name.human %>
   <%= f.input :name, label: Purchase.human_attribute_name('name') %>
   <%= f.input :price, as: :string, label: Purchase.human_attribute_name('price') << ' ¥' %>
   <div class='form-group form-actions' >
