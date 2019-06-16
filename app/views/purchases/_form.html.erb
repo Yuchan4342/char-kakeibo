@@ -1,9 +1,9 @@
 <%# new: 新規作成かどうか表す boolean. %>
 <% new ||= false %>
 <%= simple_form_for @purchase do |f| %>
-  <%= f.input :bought_at, label: t('activerecord.attributes.purchase.bought_at', default: 'Date'),
+  <%= f.input :bought_at, label: Purchase.human_attribute_name('bought_at'),
   discard_hour: true, discard_minute: true %>
-  <%= f.input :name, label: t('activerecord.attributes.purchase.name') %>
-  <%= f.input :price, label: t('activerecord.attributes.purchase.price') %>
+  <%= f.input :name, label: Purchase.human_attribute_name('name') %>
+  <%= f.input :price, label: Purchase.human_attribute_name('price') %>
   <%= f.button :submit %>
 <% end %>

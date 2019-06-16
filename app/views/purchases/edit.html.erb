@@ -1,7 +1,7 @@
-<h1>取引の編集</h1>
+<h1><%= t('.edit_purchase') %></h1>
 <div>
 <%= render partial: 'form' %>
 </div>
 <%= link_to(purchases_path) do %>
-<span>戻る</span>
+<span><%= t('.action.back') %></span>
 <% end %>
