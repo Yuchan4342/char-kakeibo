@@ -12,8 +12,11 @@ ja:
   title: 家計簿
   activerecord:
     models: &association_names
+      category: カテゴリー
       purchase: 取引
     attributes:
+      category:
+        name: 名前
       purchase:
         bought_at: 日付
         name: 名前
@@ -24,6 +27,16 @@ ja:
         restrict_dependent_destroy:
           has_one: "%{record}が存在しているので削除できません"
           has_many: "%{record}が存在しているので削除できません"
+  categories:
+    index:
+      <<: *view_common
+      new_category: 新規作成
+    new:
+      <<: *view_common
+      new_category: 新規作成
+    edit:
+      <<: *view_common
+      edit_category: カテゴリーの編集
   purchases:
     index:
       <<: *view_common
