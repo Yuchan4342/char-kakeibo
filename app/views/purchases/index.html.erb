@@ -1,6 +1,6 @@
 <h1><%= t('title') %></h1>
 <%= link_to(new_purchase_path) do %>
-<span><%= t('.new_purchase') %></span>
+<span class="btn btn-primary"><%= t('.new_purchase') %></span>
 <% end %>
 <table border="1">
 <tr>
@@ -17,12 +17,12 @@
 <th><%= number_to_currency(purchase.price) %></th>
 <th>
 <%= link_to(edit_purchase_path(purchase)) do %>
-<span><%= t('.action.edit') %></span>
+<span class="btn btn-primary"><%= t('.action.edit') %></span>
 <% end %>
 </th>
 <th>
 <%= link_to(purchase, method: :delete, data: { confirm: '削除しますか?' }) do %>
-<span><%= t('.action.delete') %></span>
+<span class="btn btn-primary"><%= t('.action.delete') %></span>
 <% end %>
 </th>
 </tr>

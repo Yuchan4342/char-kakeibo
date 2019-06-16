@@ -5,5 +5,5 @@
   discard_hour: true, discard_minute: true %>
   <%= f.input :name, label: Purchase.human_attribute_name('name') %>
   <%= f.input :price, label: Purchase.human_attribute_name('price') %>
-  <%= f.button :submit %>
+  <%= f.button :submit, class: "btn btn-primary" %>
 <% end %>
