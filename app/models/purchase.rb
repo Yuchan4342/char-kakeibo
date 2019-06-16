@@ -15,5 +15,6 @@
 
 # Purchase model. 購入などの取引を表すモデル.
 class Purchase < ApplicationRecord
+  belongs_to :category
   validates :price, presence: true
 end

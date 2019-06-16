@@ -12,4 +12,5 @@
 
 # Category model. 費目を表すモデル.
 class Category < ApplicationRecord
+  has_many :purchases, dependent: :nullify, inverse_of: :category
 end
