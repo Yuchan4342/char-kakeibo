@@ -37,6 +37,18 @@ ja:
       updated: 'パスワードを変更しました。'
       updated_not_active: 'パスワードを変更しました。'
     registrations:
+      new:
+        sign_up: アカウント登録
+        characters_minimum: "%{num}文字以上"
+      edit:
+        edit_user: アカウント情報の編集
+        back: 戻る
+        cancel_my_account: アカウントの削除
+        cancel_confirm: このアカウントを削除しますか?
+        leave_it_blank: パスワードを変更しない場合は空白にしてください。
+        need_current_password: 情報を変更するには現在のパスワードが必要です。
+        unhappy: ''
+        update: 更新
       destroyed: 'アカウントを削除しました。またのご利用をお待ちしております。'
       signed_up: 'アカウント登録を受け付けました。'
       signed_up_but_inactive: 'ログインするためには、アカウントを有効化してください。'
@@ -46,9 +58,29 @@ ja:
       updated: "アカウントが更新されました。"
       updated_but_not_signed_in: "アカウントが更新されました。パスワードが変更されたため、再度ログインが必要です。"
     sessions:
-      signed_in: "ログインしました。"
-      signed_out: "ログアウトしました。"
-      already_signed_out: '既にログアウト済みです。'
+      new:
+        sign_in: サインイン
+      signed_in: ログインしました。
+      signed_out: ログアウトしました。
+      already_signed_out: 既にログアウト済みです。
+    passwords:
+      new:
+        forgot_your_password: パスワードの再設定
+        send_instructions: パスワード再設定用のメールを送る
+      edit:
+        change_your_password: パスワードを再設定する
+        new_password: 新しいパスワード
+        new_password_confirmation: 新しいパスワード確認
+        characters_minimum: "%{num}文字以上"
+        change_my_password: 再設定
+    shared:
+      links:
+        didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"
+        didn_t_receive_unlock_instructions: "アカウントの凍結解除方法のメールを受け取っていませんか?"
+        forgot_your_password: "パスワードをお忘れですか?"
+        sign_in: サインイン
+        sign_in_with_provider: "%{provider}でログイン"
+        sign_up: アカウント登録
     unlocks:
       send_instructions: "アカウントのロックを解除する方法を数分以内にメールでご連絡します。"
       send_paranoid_instructions: "アカウントが存在する場合、ロックを解除する方法をメールでご連絡します。"

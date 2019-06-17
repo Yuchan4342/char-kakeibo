@@ -37,6 +37,18 @@ en:
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
     registrations:
+      new:
+        sign_up: "Sign Up"
+        characters_minimum: "%{num} characters minimum"
+      edit:
+        edit_user: "Edit User"
+        back: "Back"
+        cancel_my_account: "Cancel my account"
+        cancel_confirm: "Are you sure?"
+        leave_it_blank: "leave it blank if you don't want to change it"
+        need_current_password: "we need your current password to confirm your changes"
+        unhappy: "Unhappy?"
+        update: "Update"
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
@@ -46,9 +58,29 @@ en:
       updated: "Your account has been updated successfully."
       updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
     sessions:
+      new:
+        sign_in: "Sign In"
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
+    passwords:
+      new:
+        forgot_your_password: "Forgot your password?"
+        send_instructions: "Send me reset password instructions"
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        new_password_confirmation: "Confirm your new password"
+        characters_minimum: "%{num} characters minimum"
+        change_my_password: "Change my password"
+    shared:
+      links:
+        didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
+        didn_t_receive_unlock_instructions: "Didn't receive unlock instructions?"
+        forgot_your_password: "Forgot your password?"
+        sign_in: "Log in"
+        sign_in_with_provider: "Sign in with %{provider}"
+        sign_up: "Sign Up"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
