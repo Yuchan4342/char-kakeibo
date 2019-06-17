@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <% if user_signed_in? %>
+        <%# サインインしている場合の表示. %>
+        <h2><%= t('.top_menu') %></h2>
+        <ul>
+          <li><%= link_to(Purchase.model_name.human, purchases_path) %></li>
+          <li><%= link_to(Category.model_name.human, categories_path) %></li>
+        </ul>
+      <% else %>
+        <%# サインインしていない場合の表示. %>
+        <h2><%= t('.kakeibo') %></h2>
+        <p>このアプリでは、日々の収入・支出を記録できます。</p>
+        <p>記録した収入や支出は後で見ることができるので、金銭管理の手助けになります！</p>
+        <p><%= link_to(t('.sign_in'), new_user_session_path, class: 'btn btn-lg btn-primary') %></p>
+        <p><%= link_to(t('.sign_up'), new_user_registration_path, class: 'btn btn-lg btn-success') %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

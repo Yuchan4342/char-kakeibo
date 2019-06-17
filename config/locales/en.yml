@@ -38,6 +38,12 @@ en:
         restrict_dependent_destroy:
           has_one: Cannot delete record because a dependent %{record} exists
           has_many: Cannot delete record because dependent %{record} exist
+  top:
+    index:
+      kakeibo: "Kakeibo"
+      top_menu: "Top Menu"
+      sign_in: "Sign In"
+      sign_up: "Sign Up"
   layouts:
     navbar:
       devise:
