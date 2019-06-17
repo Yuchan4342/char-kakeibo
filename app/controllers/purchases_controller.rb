@@ -10,7 +10,8 @@ class PurchasesController < ApplicationController
   before_action :create_default_category, only: %i[new edit]
 
   def index
-    @purchases = Purchase.eager_load(:category).order('bought_at DESC')
+    @purchases = Purchase.where(user: current_user)
+                         .eager_load(:category).order('bought_at DESC')
   end
 
   def new
@@ -65,6 +66,11 @@ class PurchasesController < ApplicationController
 
   def set_purchase
     @purchase = Purchase.find(params[:id])
+    # 自分以外の Purchase を編集/削除などできないようにチェック.
+    return if @purchase.user_id == current_user.id
+
+    # purchases#index に飛ばす. TODO: i18n 対応.
+    redirect_to(purchases_path, notice: '権限がありません。')
   end
 
   def purchase_params

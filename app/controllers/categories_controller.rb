@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   before_action :create_default_category, only: %i[index]
 
   def index
-    @categories = Category.all
+    @categories = Category.where(user: current_user)
   end
 
   def new
@@ -65,6 +65,11 @@ class CategoriesController < ApplicationController
 
   def set_category
     @category = Category.find(params[:id])
+    # 自分以外の Category を編集/削除などできないようにチェック.
+    return if @category.user_id == current_user.id
+
+    # categories#index に飛ばす. TODO: i18n 対応.
+    redirect_to(categories_path, notice: '権限がありません。')
   end
 
   def category_params
