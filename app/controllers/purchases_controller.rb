@@ -3,8 +3,11 @@
 # PurchaseController
 # 購入 Purchase に関連する Controller.
 class PurchasesController < ApplicationController
+  include DefaultCategory
+
   before_action :authenticate_user!
   before_action :set_purchase, only: %i[edit update destroy]
+  before_action :create_default_category, only: %i[new edit]
 
   def index
     @purchases = Purchase.eager_load(:category).order('bought_at DESC')
