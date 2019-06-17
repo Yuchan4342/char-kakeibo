@@ -71,5 +71,5 @@ gem 'simple_form'
 # Bootstrap
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-# ログイン機能などの実装用
+# サインイン機能などの実装用
 gem 'devise'

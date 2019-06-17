@@ -28,7 +28,7 @@ ja:
         password: パスワード
         password_confirmation: パスワード確認
         current_password: 現在のパスワード
-        remember_me: ログイン状態を保存する
+        remember_me: サインイン状態を保存する
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
