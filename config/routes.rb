@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'purchases#index'
   resources :purchases, except: :show
   resources :categories, except: :show
+  devise_for :users
 end

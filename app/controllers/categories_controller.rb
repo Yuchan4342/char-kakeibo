@@ -3,6 +3,7 @@
 # CategoriesController
 # カテゴリー Categories に関連する Controller.
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_category, only: %i[edit update destroy]
 
   def index

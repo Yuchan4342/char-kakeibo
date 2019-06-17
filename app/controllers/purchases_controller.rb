@@ -3,6 +3,7 @@
 # PurchaseController
 # 購入 Purchase に関連する Controller.
 class PurchasesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_purchase, only: %i[edit update destroy]
 
   def index
