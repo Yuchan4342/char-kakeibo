@@ -60,17 +60,17 @@ ja:
     sessions:
       new:
         sign_in: サインイン
-      signed_in: "ログインしました。"
-      signed_out: "ログアウトしました。"
-      already_signed_out: '既にログアウト済みです。'
+      signed_in: ログインしました。
+      signed_out: ログアウトしました。
+      already_signed_out: 既にログアウト済みです。
     shared:
       links:
         didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"
         didn_t_receive_unlock_instructions: "アカウントの凍結解除方法のメールを受け取っていませんか?"
         forgot_your_password: "パスワードをお忘れですか?"
-        sign_in: "ログイン"
+        sign_in: サインイン
         sign_in_with_provider: "%{provider}でログイン"
-        sign_up: "アカウント登録"
+        sign_up: アカウント登録
     unlocks:
       send_instructions: "アカウントのロックを解除する方法を数分以内にメールでご連絡します。"
       send_paranoid_instructions: "アカウントが存在する場合、ロックを解除する方法をメールでご連絡します。"
