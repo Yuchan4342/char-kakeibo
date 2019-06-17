@@ -2,6 +2,8 @@
   <div class="row">
     <div class="col-md-12">
       <h2><%= t('.forgot_your_password') %></h2>
+      <%# メール機能が実装されたら外す. %>
+      <div class='text-danger'><%= t('.unable_now') %></div>
 
       <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
         <%= f.error_notification %>
@@ -14,7 +16,9 @@
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, t('.send_instructions'), class: 'btn btn-primary' %>
+          <%# メール機能が実装されたら disabled を外す. %>
+          <%= f.button :submit, t('.send_instructions'), class: 'btn btn-primary',
+          disabled: true %>
         </div>
       <% end %>
 
