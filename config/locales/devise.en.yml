@@ -41,8 +41,12 @@ en:
         sign_up: "Sign Up"
         characters_minimum: "%{num} characters minimum"
       edit:
+        edit_user: "Edit User"
         back: "Back"
         cancel_my_account: "Cancel my account"
+        cancel_confirm: "Are you sure?"
+        leave_it_blank: "leave it blank if you don't want to change it"
+        need_current_password: "we need your current password to confirm your changes"
         unhappy: "Unhappy?"
         update: "Update"
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
