@@ -20,4 +20,5 @@ class Purchase < ApplicationRecord
   belongs_to :category
   validates :bought_at, presence: true
   validates :price, presence: true
+  validates :user_id, presence: true
 end
