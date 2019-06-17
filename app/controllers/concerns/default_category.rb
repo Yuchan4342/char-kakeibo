@@ -6,8 +6,8 @@ module DefaultCategory
 
   # default のカテゴリーを作成する.
   def create_default_category
-    # カテゴリーが 1つもない場合のみ実行.
-    return if Category.count.positive?
+    # ユーザに紐づくカテゴリーが 1つもない場合のみ実行.
+    return if Category.where(user: current_user).count.positive?
 
     Category.create(name: '未定', user: current_user)
     Category.create(name: '食費', user: current_user)
