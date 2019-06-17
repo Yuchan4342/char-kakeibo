@@ -21,4 +21,9 @@ class Purchase < ApplicationRecord
   validates :bought_at, presence: true
   validates :price, presence: true
   validates :user_id, presence: true
+  validate :belongs_to_same_user?
+
+  def belongs_to_same_user?
+    user_id == category.user_id
+  end
 end
