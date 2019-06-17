@@ -7,7 +7,7 @@
     </button>
     <%# navbar の左側. %>
     <div class='collapse navbar-collapse' id='navbarNav'>
-      <ul class='navbar-nav'>
+      <ul class='navbar-nav mr-auto'>
         <li class='nav-item'>
           <%= link_to(Purchase.model_name.human, purchases_path, class: 'nav-link') %>
         </li>
@@ -15,26 +15,25 @@
           <%= link_to(Category.model_name.human, categories_path, class: 'nav-link') %>
         </li>
       </ul>
-    </div>
-    <%# navbar の右側. %>
-    <div class='navbar-nav'>
-      <%# TODO: i18n 化. %>
-      <% if user_signed_in? %>
-        <div class='nav-link'><%= current_user.name %></div>
-        <div class='nav-link'>
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </div>
-        <div class='nav-link'>
-          <%= link_to "アカウント情報更新", edit_user_registration_path, class: 'post' %>
-        </div>
-      <% else %>
-        <div class='nav-link'>
-          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-        </div>
-        <div class='nav-link'>
-          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-        </div>
-      <% end %>
+      <ul class='navbar-nav'>
+        <%# TODO: i18n 化. %>
+        <% if user_signed_in? %>
+          <li class='nav-item nav-link'><%= current_user.name %></li>
+          <li class='nav-item'>
+            <%= link_to("ログアウト", destroy_user_session_path, method: :delete, class: 'nav-link') %>
+          </li>
+          <li class='nav-item'>
+            <%= link_to("アカウント情報更新", edit_user_registration_path, class: 'post nav-link') %>
+          </li>
+        <% else %>
+          <li class='nav-item'>
+            <%= link_to "ログイン", new_user_session_path, class: 'post nav-link' %>
+          </li>
+          <li class='nav-item'>
+            <%= link_to "新規登録", new_user_registration_path, class: 'post nav-link' %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </nav>
