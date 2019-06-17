@@ -11,6 +11,7 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  category_id :integer
+#  user_id     :integer
 #
 
 # Purchase model. 購入などの取引を表すモデル.
