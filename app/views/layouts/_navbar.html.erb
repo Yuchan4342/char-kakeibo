@@ -16,7 +16,6 @@
         </li>
       </ul>
       <ul class='navbar-nav'>
-        <%# TODO: i18n 化. %>
         <% if user_signed_in? %>
           <li class='nav-item'>
             <%= link_to(current_user.name, edit_user_registration_path, class: 'post nav-link') %>
