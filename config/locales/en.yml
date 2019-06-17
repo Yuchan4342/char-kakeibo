@@ -30,8 +30,25 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
   activerecord:
+    models: &association_names
+      category: "Category"
+      purchase: "Purchase"
+      user: "User"
+    attributes:
+      category:
+        name: "Name"
+      purchase:
+        bought_at: "Date"
+        name: "Name"
+        price: "Amount"
+      user:
+        email: "Email"
+        name: "Username"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+        current_password: "Current Password"
+        remember_me: "Remember me"
     errors:
       messages:
         record_invalid: 'Validation failed: %{errors}'
