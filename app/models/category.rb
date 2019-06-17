@@ -13,6 +13,7 @@
 
 # Category model. 費目を表すモデル.
 class Category < ApplicationRecord
+  belongs_to :user
   has_many :purchases, dependent: :nullify, inverse_of: :category
   validates :name, presence: true
 end
