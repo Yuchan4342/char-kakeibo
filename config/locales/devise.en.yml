@@ -36,6 +36,16 @@ en:
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
+      new:
+        forgot_your_password: "Forgot your password?"
+        send_instructions: "Send me reset password instructions"
+        unable_now: "This function is not able now."
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        new_password_confirmation: "Confirm your new password"
+        characters_minimum: "%{num} characters minimum"
+        change_my_password: "Change my password"
     registrations:
       new:
         sign_up: "Sign Up"
@@ -63,16 +73,6 @@ en:
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
-    passwords:
-      new:
-        forgot_your_password: "Forgot your password?"
-        send_instructions: "Send me reset password instructions"
-      edit:
-        change_your_password: "Change your password"
-        new_password: "New password"
-        new_password_confirmation: "Confirm your new password"
-        characters_minimum: "%{num} characters minimum"
-        change_my_password: "Change my password"
     shared:
       links:
         didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"

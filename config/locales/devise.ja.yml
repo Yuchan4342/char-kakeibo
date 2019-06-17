@@ -14,7 +14,7 @@ ja:
       last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作が行われています。'
       not_found_in_database: 'メールアドレスまたはパスワードが無効です。'
       timeout: '一定時間が経過したため、再度ログインが必要です'
-      unauthenticated: 'ログインまたは登録が必要です。'
+      unauthenticated: 'サインインまたはアカウント登録が必要です。'
       unconfirmed: '本登録を行ってください。'
     mailer:
       confirmation_instructions:
@@ -36,6 +36,16 @@ ja:
       send_paranoid_instructions: 'あなたのメールアドレスが登録済みの場合、パスワード再設定用のメールが数分以内に送信されます。'
       updated: 'パスワードを変更しました。'
       updated_not_active: 'パスワードを変更しました。'
+      new:
+        forgot_your_password: パスワードの再設定
+        send_instructions: パスワード再設定用のメールを送る
+        unable_now: 現在この機能は利用できません。
+      edit:
+        change_your_password: パスワードを再設定する
+        new_password: 新しいパスワード
+        new_password_confirmation: 新しいパスワード確認
+        characters_minimum: "%{num}文字以上"
+        change_my_password: 再設定
     registrations:
       new:
         sign_up: アカウント登録
@@ -63,16 +73,6 @@ ja:
       signed_in: ログインしました。
       signed_out: ログアウトしました。
       already_signed_out: 既にログアウト済みです。
-    passwords:
-      new:
-        forgot_your_password: パスワードの再設定
-        send_instructions: パスワード再設定用のメールを送る
-      edit:
-        change_your_password: パスワードを再設定する
-        new_password: 新しいパスワード
-        new_password_confirmation: 新しいパスワード確認
-        characters_minimum: "%{num}文字以上"
-        change_my_password: 再設定
     shared:
       links:
         didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"

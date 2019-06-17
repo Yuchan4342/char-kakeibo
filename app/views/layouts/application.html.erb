@@ -15,6 +15,9 @@
     <% if notice %>
       <div class="alert alert-success"><%= simple_format(h(notice)) %></div>
     <% end %>
+    <% if alert %>
+      <div class="alert alert-danger"><%= simple_format(h(alert)) %></div>
+    <% end %>
     <%= yield %>
 
     <footer>
