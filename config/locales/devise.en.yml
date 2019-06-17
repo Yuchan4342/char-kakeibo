@@ -65,12 +65,12 @@ en:
       already_signed_out: "Signed out successfully."
     shared:
       links:
-        didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"
-        didn_t_receive_unlock_instructions: "アカウントの凍結解除方法のメールを受け取っていませんか?"
-        forgot_your_password: "パスワードを忘れましたか?"
-        sign_in: "ログイン"
-        sign_in_with_provider: "%{provider}でログイン"
-        sign_up: "アカウント登録"
+        didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
+        didn_t_receive_unlock_instructions: "Didn't receive unlock instructions?"
+        forgot_your_password: "Forgot your password?"
+        sign_in: "Log in"
+        sign_in_with_provider: "Sign in with %{provider}"
+        sign_up: "Sign Up"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
