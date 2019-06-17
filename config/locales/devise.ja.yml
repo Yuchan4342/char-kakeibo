@@ -3,17 +3,17 @@
 ja:
   devise:
     confirmations:
-      confirmed: 'アカウントが確認されました。ログインしています。'
+      confirmed: 'アカウントが確認されました。サインインしています。'
       send_instructions: 'アカウントの確認方法を数分以内にメールでご連絡します。'
       send_paranoid_instructions: 'ご登録のメールアドレスが保存されている場合、アカウントの確認方法をメールでご連絡します。'
     failure:
-      already_authenticated: '既にログインしています。'
+      already_authenticated: '既にサインインしています。'
       inactive: 'アカウントが有効化されていません。メールに記載された手順にしたがって、アカウントを有効化してください。'
       invalid: "%{authentication_keys} もしくはパスワードが不正です。"
       locked: 'アカウントが凍結されています。'
       last_attempt: 'あなたのアカウントが凍結される前に、複数回の操作が行われています。'
       not_found_in_database: 'メールアドレスまたはパスワードが無効です。'
-      timeout: '一定時間が経過したため、再度ログインが必要です'
+      timeout: '一定時間が経過したため、再度サインインが必要です'
       unauthenticated: 'サインインまたはアカウント登録が必要です。'
       unconfirmed: '本登録を行ってください。'
     mailer:
@@ -61,33 +61,33 @@ ja:
         update: 更新
       destroyed: 'アカウントを削除しました。またのご利用をお待ちしております。'
       signed_up: 'アカウント登録を受け付けました。'
-      signed_up_but_inactive: 'ログインするためには、アカウントを有効化してください。'
+      signed_up_but_inactive: 'サインインするためには、アカウントを有効化してください。'
       signed_up_but_locked: 'アカウントは登録されていますが、凍結されているため利用できません。'
       signed_up_but_unconfirmed: "確認メールを登録したメールアドレス宛に送信しました。リンクを開いてアカウントを有効にして下さい。"
       update_needs_confirmation: "アカウント情報が更新されました。更新の確認メールを新しいメールアドレス宛に送信しましたので、リンクを開いて更新を有効にして下さい。"
       updated: "アカウントが更新されました。"
-      updated_but_not_signed_in: "アカウントが更新されました。パスワードが変更されたため、再度ログインが必要です。"
+      updated_but_not_signed_in: "アカウントが更新されました。パスワードが変更されたため、再度サインインが必要です。"
     sessions:
       new:
         sign_in: サインイン
-      signed_in: ログインしました。
-      signed_out: ログアウトしました。
-      already_signed_out: 既にログアウト済みです。
+      signed_in: サインインしました。
+      signed_out: サインアウトしました。
+      already_signed_out: 既にサインアウト済みです。
     shared:
       links:
         didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"
         didn_t_receive_unlock_instructions: "アカウントの凍結解除方法のメールを受け取っていませんか?"
         forgot_your_password: "パスワードをお忘れですか?"
         sign_in: サインイン
-        sign_in_with_provider: "%{provider}でログイン"
+        sign_in_with_provider: "%{provider}でサインイン"
         sign_up: アカウント登録
     unlocks:
       send_instructions: "アカウントのロックを解除する方法を数分以内にメールでご連絡します。"
       send_paranoid_instructions: "アカウントが存在する場合、ロックを解除する方法をメールでご連絡します。"
-      unlocked: "アカウントのロックが解除されました。ログインしています。"
+      unlocked: "アカウントのロックが解除されました。サインインしています。"
   errors:
     messages:
-      already_confirmed: "は既に登録済みです。ログインしてください"
+      already_confirmed: "は既に登録済みです。サインインしてください"
       confirmation_period_expired: "%{period}以内に確認する必要がありますので、新しくリクエストしてください。"
       expired: "有効期限切れです。新規登録してください。"
       not_found: "は見つかりませんでした。"
