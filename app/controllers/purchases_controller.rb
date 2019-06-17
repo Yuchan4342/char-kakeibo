@@ -19,6 +19,7 @@ class PurchasesController < ApplicationController
   def create
     # エラー時の render 用に、@purchase を作成しておく.
     @purchase = Purchase.new(purchase_params)
+    @purchase.user = current_user
     respond_to do |format|
       if @purchase.save
         format.html do

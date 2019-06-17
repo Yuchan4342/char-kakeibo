@@ -19,6 +19,7 @@ class CategoriesController < ApplicationController
   def create
     # エラー時の render 用に、@category を作成しておく.
     @category = Category.new(category_params)
+    @category.user = current_user
     respond_to do |format|
       if @category.save
         format.html do
