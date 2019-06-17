@@ -18,6 +18,17 @@
     </div>
     <%# navbar の右側. %>
     <div class='navbar-nav'>
+      <%# TODO: i18n 化. %>
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <% else %>
+        <div class='nav-link'>
+          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+        </div>
+        <div class='nav-link'>
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+        </div>
+      <% end %>
     </div>
   </div>
 </nav>
