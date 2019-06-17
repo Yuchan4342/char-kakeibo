@@ -15,7 +15,7 @@
                       required: true %>
           <%= f.input :password,
                       required: true,
-                      hint: ("#{t('.characters_minimum', num: @minimum_password_length)}" if @minimum_password_length),
+                      hint: (t('.characters_minimum', num: @minimum_password_length) if @minimum_password_length),
                       input_html: { autocomplete: "new-password" } %>
           <%= f.input :password_confirmation,
                       required: true,

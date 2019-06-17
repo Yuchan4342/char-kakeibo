@@ -67,6 +67,12 @@ en:
       new:
         forgot_your_password: "Forgot your password?"
         send_instructions: "Send me reset password instructions"
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        new_password_confirmation: "Confirm your new password"
+        characters_minimum: "%{num} characters minimum"
+        change_my_password: "Change my password"
     shared:
       links:
         didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"

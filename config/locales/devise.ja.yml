@@ -65,8 +65,14 @@ ja:
       already_signed_out: 既にログアウト済みです。
     passwords:
       new:
-        forgot_your_password: パスワードをお忘れですか?
+        forgot_your_password: パスワードの再設定
         send_instructions: パスワード再設定用のメールを送る
+      edit:
+        change_your_password: パスワードを再設定する
+        new_password: 新しいパスワード
+        new_password_confirmation: 新しいパスワード確認
+        characters_minimum: "%{num}文字以上"
+        change_my_password: 再設定
     shared:
       links:
         didn_t_receive_confirmation_instructions: "アカウント確認のメールを受け取っていませんか?"
