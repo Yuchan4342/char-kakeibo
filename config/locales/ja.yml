@@ -41,6 +41,12 @@ ja:
         sign_in: サインイン
         sign_up: 新規登録
         sign_out: サインアウト
+  top:
+    index:
+      kakeibo: 家計簿
+      top_menu: トップメニュー
+      sign_in: サインイン
+      sign_up: 新規登録
   categories:
     index:
       <<: *view_common
