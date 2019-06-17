@@ -20,6 +20,7 @@
     <div class='navbar-nav'>
       <%# TODO: i18n 化. %>
       <% if user_signed_in? %>
+        <div class='nav-link'><%= current_user.name %></div>
         <div class='nav-link'>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </div>
