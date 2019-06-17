@@ -10,7 +10,7 @@ class CategoriesController < ApplicationController
   before_action :create_default_category, only: %i[index]
 
   def index
-    @categories = Category.all
+    @categories = Category.where(user: current_user)
   end
 
   def new

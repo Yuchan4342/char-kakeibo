@@ -10,7 +10,8 @@ class PurchasesController < ApplicationController
   before_action :create_default_category, only: %i[new edit]
 
   def index
-    @purchases = Purchase.eager_load(:category).order('bought_at DESC')
+    @purchases = Purchase.where(user: current_user)
+                         .eager_load(:category).order('bought_at DESC')
   end
 
   def new
