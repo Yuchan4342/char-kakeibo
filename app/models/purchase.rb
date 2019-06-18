@@ -22,7 +22,7 @@ class Purchase < ApplicationRecord
   validates :price, presence: true,
                     numericality: { greater_than: 0,
                                     # 可能なら price を bigint に変えてもよいかも.
-                                    less_than_or_equal_to: 2_147_483_647 }
+                                    less_than_or_equal_to: 9_999_999_999 }
   validates :user_id, presence: true
   validate :belongs_to_same_user?
 
