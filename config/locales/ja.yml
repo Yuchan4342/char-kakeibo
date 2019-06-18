@@ -21,7 +21,7 @@ ja:
       purchase:
         bought_at: 日付
         name: 名前
-        price: 値段
+        price: 金額
       user:
         email: メールアドレス
         name: ユーザー名
