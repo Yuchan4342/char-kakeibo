@@ -7,7 +7,7 @@
   start_year: 1970, end_year: Date.today.year + 1 %>
   <%= f.association :category, label: Category.model_name.human, collection: Category.where(user: current_user) %>
   <%= f.input :name, label: Purchase.human_attribute_name('name') %>
-  <%= f.input :price, as: :string,
+  <%= f.input :price, as: :tel, input_html: { maxlength: '10' },
   label: Purchase.human_attribute_name('price') << "(#{t('number.currency.format.unit')})" %>
   <div class='form-group form-actions'>
     <div class="control-group col-sm-offset-3 col-sm-9">
