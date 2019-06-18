@@ -73,3 +73,5 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 # サインイン機能などの実装用
 gem 'devise'
+# リダイレクトの設定.
+gem 'rack-rewrite'
