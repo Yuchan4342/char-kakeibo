@@ -11,6 +11,7 @@
       <% else %>
         <%# サインインしていない場合の表示. %>
         <h2><%= t('.kakeibo') %></h2>
+        <%# TODO: i18n 対応. %>
         <p>このアプリでは、日々の収入・支出を記録できます。</p>
         <p>記録した収入や支出は後で見ることができるので、金銭管理の手助けになります！</p>
         <p><%= link_to(t('.sign_in'), new_user_session_path, class: 'btn btn-lg btn-primary') %></p>

@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  title: "Kakeibo"
   activerecord:
     models: &association_names
       category: "Category"
