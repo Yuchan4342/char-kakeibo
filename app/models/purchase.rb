@@ -6,12 +6,12 @@
 #
 #  id          :bigint           not null, primary key
 #  name        :string
-#  price       :integer
+#  price       :bigint
 #  bought_at   :datetime
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  category_id :integer
-#  user_id     :integer
+#  category_id :bigint
+#  user_id     :bigint
 #
 
 # Purchase model. 購入などの取引を表すモデル.
