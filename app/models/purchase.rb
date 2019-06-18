@@ -6,12 +6,12 @@
 #
 #  id          :bigint           not null, primary key
 #  name        :string
-#  price       :integer
+#  price       :bigint
 #  bought_at   :datetime
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  category_id :integer
-#  user_id     :integer
+#  category_id :bigint
+#  user_id     :bigint
 #
 
 # Purchase model. 購入などの取引を表すモデル.
@@ -19,7 +19,10 @@ class Purchase < ApplicationRecord
   belongs_to :user
   belongs_to :category
   validates :bought_at, presence: true
-  validates :price, presence: true, numericality: { greater_than: 0 }
+  validates :price, presence: true,
+                    numericality: { greater_than: 0,
+                                    # 可能なら price を bigint に変えてもよいかも.
+                                    less_than_or_equal_to: 9_999_999_999 }
   validates :user_id, presence: true
   validate :belongs_to_same_user?
 
