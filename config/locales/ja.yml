@@ -53,7 +53,7 @@ ja:
       new_category: 新規作成
     new:
       <<: *view_common
-      new_category: 新規作成
+      new_category: 新しいカテゴリーの作成
     create:
       successfully_created: カテゴリーの作成が完了しました。
     edit:
@@ -67,13 +67,13 @@ ja:
     index:
       <<: *view_common
       purchases: 取引記録
-      new_purchase: 新規取引
+      new_purchase: 新規追加
       select_month: 月選択
       no_data: データがありません
       confirm_delete: 削除しますか?
     new:
       <<: *view_common
-      new_purchase: 新規取引
+      new_purchase: 新しい取引の追加
     create:
       successfully_created: 取引の作成が完了しました。
     edit:
