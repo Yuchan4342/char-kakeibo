@@ -21,7 +21,9 @@
     <% if alert %>
       <div class="alert alert-danger"><%= simple_format(h(alert)) %></div>
     <% end %>
-    <%= yield %>
+    <div class="pb-5">
+      <%= yield %>
+    </div>
 
     <footer>
       <div class="container-fluid">
