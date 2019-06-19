@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-md-12">
       <h2><%= t('.purchases') %></h2>
-      <div class="row">
-        <div class="col-md-8">
+      <div class="row my-2">
+        <div class="col-sm-8">
           <%= form_tag(purchases_path, method: 'get', class: 'form-horizontal') do %>
             <div class='form-group form-inline'>
               <%= date_select('search', 'date',
@@ -11,12 +11,12 @@
                                 default: @search_date,
                                 start_year: 1970,
                                 end_year:Date.today.year + 1 },
-                              { class: 'form-control' }) %>
-              <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary ml-2') %>
+                              { class: 'form-control my-1 mr-1' }) %>
+              <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary my-1') %>
             </div>
           <% end %>
         </div>
-        <div class='col-md-4 text-right'>
+        <div class='col-sm-4 text-right'>
           <%= link_to(new_purchase_path) do %>
             <span class="btn btn-primary"><%= t('.new_purchase') %></span>
           <% end %>
