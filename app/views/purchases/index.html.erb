@@ -7,7 +7,10 @@
           <%= form_tag(purchases_path, method: 'get', class: 'form-horizontal') do %>
             <div class='form-group form-inline'>
               <%= date_select('search', 'date',
-                              { discard_day: true, default: @search_date },
+                              { discard_day: true,
+                                default: @search_date,
+                                start_year: 1970,
+                                end_year:Date.today.year + 1 },
                               { class: 'form-control' }) %>
               <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary ml-2') %>
             </div>
