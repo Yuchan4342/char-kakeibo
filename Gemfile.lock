@@ -210,6 +210,8 @@ GEM
     simple_form (4.1.0)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
+    sitemap_generator (6.0.2)
+      builder (~> 3.0)
     solargraph (0.32.5)
       backport (~> 1.1)
       bundler (>= 1.17.2)
@@ -279,6 +281,7 @@ DEPENDENCIES
   rubocop-rails
   sass-rails (~> 5.0)
   simple_form
+  sitemap_generator
   solargraph
   spring
   spring-watcher-listen (~> 2.0.0)
