@@ -67,3 +67,5 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
+# Ignore sitemap file
+public/sitemap.xml.gz
