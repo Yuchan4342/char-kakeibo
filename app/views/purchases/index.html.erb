@@ -34,22 +34,22 @@
         </thead>
         <tbody>
           <% if @purchases.count.zero? %>
-            <tr><th class='text-center' colspan='5'><%= t('.no_data') %></th></tr>
+            <tr><td class='text-center' colspan='5'><%= t('.no_data') %></td></tr>
           <% else %>
             <% @purchases.each do |purchase| %>
             <tr>
-              <th><%= l(purchase.bought_at.to_date, format: :long) %></th>
-              <th><%= purchase.category&.name %></th>
-              <th><%= purchase.name %></th>
-              <th><%= number_to_currency(purchase.price) %></th>
-              <th>
+              <td><%= l(purchase.bought_at.to_date, format: :long) %></td>
+              <td><%= purchase.category&.name %></td>
+              <td><%= purchase.name %></td>
+              <td><%= number_to_currency(purchase.price) %></td>
+              <td>
                 <%= link_to(edit_purchase_path(purchase)) do %>
                 <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
                 <% end %>
                 <%= link_to(purchase, method: :delete, data: { confirm: t('.confirm_delete') }) do %>
                 <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
                 <% end %>
-              </th>
+              </td>
             </tr>
             <% end %>
           <% end %>
