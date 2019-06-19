@@ -7,7 +7,7 @@
         <span class="btn btn-primary mb-2"><%= t('.new_category') %></span>
         <% end %>
       </div>
-      <table class="table table-striped table-hover table-condensed">
+      <table class="table table-striped table-hover table-sm">
         <thead>
           <tr>
             <th><%= Category.human_attribute_name('name') %></th>
@@ -17,15 +17,15 @@
         <tbody>
           <% @categories.each do |category| %>
             <tr>
-            <th><%= category.name %></th>
-            <th>
+            <td><%= category.name %></td>
+            <td>
               <%= link_to(edit_category_path(category)) do %>
               <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
               <% end %>
               <%= link_to(category, method: :delete, data: { confirm: '削除しますか?' }) do %>
               <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
               <% end %>
-            </th>
+            </td>
           </tr>
           <% end %>
         </tbody>
