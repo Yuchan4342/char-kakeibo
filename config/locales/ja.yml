@@ -68,6 +68,8 @@ ja:
       <<: *view_common
       purchases: 取引記録
       new_purchase: 新規取引
+      select_month: 月選択
+      confirm_delete: 削除しますか?
     new:
       <<: *view_common
       new_purchase: 新規取引
