@@ -2,15 +2,14 @@
   <div class="row">
     <div class="col-md-12">
       <h2><%= t('.purchases') %></h2>
-      <div class="row mt-2 mb-2">
+      <div class="row">
         <div class="col-md-8">
-          <%= form_tag(purchases_path, method: 'get') do %>
-            <div class="form-inline">
-              <label>月選択:</label>
+          <%= form_tag(purchases_path, method: 'get', class: 'form-horizontal') do %>
+            <div class='form-group form-inline'>
               <%= date_select('search', 'date',
                               { discard_day: true, default: @search_date },
                               { class: 'form-control' }) %>
-              <%= submit_tag("Search", class: 'btn btn-sm btn-primary ml-2') %>
+              <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary ml-2') %>
             </div>
           <% end %>
         </div>
@@ -41,8 +40,7 @@
               <%= link_to(edit_purchase_path(purchase)) do %>
               <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
               <% end %>
-              <%# TODO: i18n 対応. %>
-              <%= link_to(purchase, method: :delete, data: { confirm: '削除しますか?' }) do %>
+              <%= link_to(purchase, method: :delete, data: { confirm: t('.confirm_delete') }) do %>
               <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
               <% end %>
             </th>
