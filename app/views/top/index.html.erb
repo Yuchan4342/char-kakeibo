@@ -6,7 +6,13 @@
         <h2><%= t('.top_menu') %></h2>
         <ul>
           <li><%= link_to(Purchase.model_name.human, purchases_path) %></li>
+          <ul>
+            <li>普段の買い物などの収入や支出を記録して見ることができます。</li>
+          </ul>
           <li><%= link_to(Category.model_name.human, categories_path) %></li>
+          <ul>
+            <li>カテゴリーを登録して、収入や支出を分類することができます。</li>
+          </ul>
         </ul>
       <% else %>
         <%# サインインしていない場合の表示. %>
