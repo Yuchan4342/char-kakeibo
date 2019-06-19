@@ -53,7 +53,7 @@ ja:
       new_category: 新規作成
     new:
       <<: *view_common
-      new_category: 新規作成
+      new_category: 新しいカテゴリーの作成
     create:
       successfully_created: カテゴリーの作成が完了しました。
     edit:
