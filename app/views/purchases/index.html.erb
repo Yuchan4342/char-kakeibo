@@ -1,9 +1,9 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12">
-      <h2><%= t('.purchases') %></h2>
-      <div class="row">
-        <div class="col-md-8">
+      <h2><%= t('.purchases') << ' ' << l(@search_date, format: :month) %></h2>
+      <div class="row my-2">
+        <div class="col-sm-8">
           <%= form_tag(purchases_path, method: 'get', class: 'form-horizontal') do %>
             <div class='form-group form-inline'>
               <%= date_select('search', 'date',
@@ -11,18 +11,18 @@
                                 default: @search_date,
                                 start_year: 1970,
                                 end_year:Date.today.year + 1 },
-                              { class: 'form-control' }) %>
-              <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary ml-2') %>
+                              { class: 'form-control my-1 mr-1' }) %>
+              <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary my-1') %>
             </div>
           <% end %>
         </div>
-        <div class='col-md-4 text-right'>
+        <div class='col-sm-4 text-right'>
           <%= link_to(new_purchase_path) do %>
             <span class="btn btn-primary"><%= t('.new_purchase') %></span>
           <% end %>
         </div>
       </div>
-      <table class="table table-striped table-hover table-condensed">
+      <table class="table table-striped table-hover table-sm">
         <thead>
           <tr>
             <th><%= Purchase.human_attribute_name('bought_at') %></th>
@@ -34,22 +34,22 @@
         </thead>
         <tbody>
           <% if @purchases.count.zero? %>
-            <tr><th class='text-center' colspan='5'><%= t('.no_data') %></th></tr>
+            <tr><td class='text-center' colspan='5'><%= t('.no_data') %></td></tr>
           <% else %>
             <% @purchases.each do |purchase| %>
             <tr>
-              <th><%= l(purchase.bought_at.to_date, format: :long) %></th>
-              <th><%= purchase.category&.name %></th>
-              <th><%= purchase.name %></th>
-              <th><%= number_to_currency(purchase.price) %></th>
-              <th>
+              <td><%= l(purchase.bought_at.to_date, format: :short_with_day) %></td>
+              <td><%= purchase.category&.name %></td>
+              <td><%= purchase.name %></td>
+              <td><%= number_to_currency(purchase.price) %></td>
+              <td>
                 <%= link_to(edit_purchase_path(purchase)) do %>
                 <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
                 <% end %>
                 <%= link_to(purchase, method: :delete, data: { confirm: t('.confirm_delete') }) do %>
                 <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
                 <% end %>
-              </th>
+              </td>
             </tr>
             <% end %>
           <% end %>
