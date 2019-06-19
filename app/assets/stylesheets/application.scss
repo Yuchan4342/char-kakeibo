@@ -15,6 +15,16 @@
  */
 @import "bootstrap";
 
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  height: auto;
+}
+
 .btn-default {
   border: 1px solid #333;
 }
@@ -25,6 +35,10 @@ h1, h2, h3 {
 }
 
 footer {
+  // コンテンツの高さが足りない時にウィンドウの一番下に置かれるようにする.
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 10px;
   margin-top: 40px;
   background-color: #303030;
