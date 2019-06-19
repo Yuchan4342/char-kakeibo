@@ -75,3 +75,7 @@ gem 'jquery-rails'
 gem 'devise'
 # リダイレクトの設定.
 gem 'rack-rewrite'
+# pry を導入
+gem 'pry-byebug'
+gem 'pry-doc'
+gem 'pry-rails'
