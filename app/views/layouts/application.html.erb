@@ -21,9 +21,11 @@
     <% if alert %>
       <div class="alert alert-danger"><%= simple_format(h(alert)) %></div>
     <% end %>
-    <%= yield %>
+    <div class="mb-5">
+      <%= yield %>
+    </div>
 
-    <footer>
+    <footer class="fixed-bottom">
       <div class="container-fluid">
         <div class="row">
           <div class="pull-right">Copyright &copy; 2019 Yuto Iwata</div>
