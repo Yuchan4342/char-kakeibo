@@ -73,6 +73,7 @@ en:
       purchases: "Purchases"
       new_purchase: "New Purchase"
       select_month: "Select"
+      no_data: "No Data"
       confirm_delete: "Delete?"
   date:
     abbr_day_names:
