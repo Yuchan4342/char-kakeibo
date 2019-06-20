@@ -97,8 +97,7 @@ class PurchasesController < ApplicationController
 
   # パラメータから表示するカテゴリーを設定する. パラメータがない場合は全カテゴリー.
   def set_selected_category
-    search_params = params[:search]
-    @selected_category_id = search_params&.[](:category)
+    @selected_category_id = params[:search]&.[](:category)
     @search_category = if @selected_category_id.present?
                          @selected_category_id.to_i
                        else
