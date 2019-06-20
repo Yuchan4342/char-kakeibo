@@ -15,9 +15,9 @@
                          { class: 'form-control ck-date-auto-width' }) %>
               <label class='ml-2'><%= Category.model_name.human %>:</label>
               <%= collection_select('search', 'category',
-                                    Category.where(user: current_user), :id, :name,
-                                    { include_blank: true },
-                                    { class: 'form-control ck-date-auto-width m-1' }) %>
+                                    @categories, :id, :name,
+                                    { selected: @selected_category_id, include_blank: true },
+                                    { class: 'form-control ck-date-auto-width mx-1' }) %>
               <%= submit_tag(t('.action.select', default: "Select"), class: 'btn btn-sm btn-primary my-1') %>
             </div>
           <% end %>
