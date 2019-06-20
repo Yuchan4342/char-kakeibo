@@ -39,6 +39,7 @@ view_common: &view_common
     back: "Back"
     next: "Next"
     select: "Select"
+    all: "All"
 
 en:
   title: "Kakeibo"

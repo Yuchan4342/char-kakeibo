@@ -8,6 +8,7 @@ view_common: &view_common
     back: 戻る
     next: 次へ
     select: 選択
+    all: すべて
 
 ja:
   title: 家計簿
