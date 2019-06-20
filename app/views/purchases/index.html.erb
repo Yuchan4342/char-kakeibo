@@ -8,12 +8,11 @@
             <div class='form-group form-inline'>
               <%= select('search', 'year',
                          (1_970..(Date.today.year + 1)), { selected: @search_date.year },
-                         { class: 'form-control ck-date-auto-width my-1' }) %>
-              <label class='mr-1'>年</label>
+                         { class: 'form-control ck-date-auto-width' }) %>
+              <label class='mx-1'>/</label>
               <%= select('search', 'month',
                          (1..12), { selected: @search_date.month },
-                         { class: 'form-control ck-date-auto-width my-1' }) %>
-              <label class='mr-1'>月</label>
+                         { class: 'form-control ck-date-auto-width' }) %>
               <label class='ml-2'><%= Category.model_name.human %>:</label>
               <%= collection_select('search', 'category',
                                     Category.where(user: current_user), :id, :name,
