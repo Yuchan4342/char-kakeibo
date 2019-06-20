@@ -29,6 +29,18 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+view_common: &view_common
+  actions: 操作
+  action: &action_common
+    new: "New"
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    back: "Back"
+    next: "Next"
+    select: "Select"
+    all: "All"
+
 en:
   title: "Kakeibo"
   activerecord:
@@ -71,9 +83,9 @@ en:
         sign_out: "Sign Out"
   purchases:
     index:
+      <<: *view_common
       purchases: "Purchases"
       new_purchase: "New Purchase"
-      select_month: "Select"
       no_data: "No Data"
       confirm_delete: "Delete?"
   date:

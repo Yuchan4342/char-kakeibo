@@ -3,20 +3,26 @@
     <div class="col-md-12">
       <h2><%= t('.purchases') << ' ' << l(@search_date, format: :month) %></h2>
       <div class="row my-2">
-        <div class="col-sm-8">
+        <div class="col-sm-9">
           <%= form_tag(purchases_path, method: 'get', class: 'form-horizontal') do %>
             <div class='form-group form-inline'>
-              <%= date_select('search', 'date',
-                              { discard_day: true,
-                                default: @search_date,
-                                start_year: 1970,
-                                end_year:Date.today.year + 1 },
-                              { class: 'form-control ck-date-auto-width my-1 mr-1' }) %>
-              <%= submit_tag(t('.select_month'), class: 'btn btn-sm btn-primary my-1') %>
+              <%= select('search', 'year',
+                         (1_970..(Date.today.year + 1)), { selected: @search_date.year },
+                         { class: 'form-control ck-date-auto-width' }) %>
+              <label class='mx-1'>/</label>
+              <%= select('search', 'month',
+                         (1..12), { selected: @search_date.month },
+                         { class: 'form-control ck-date-auto-width' }) %>
+              <label class='ml-2'><%= Category.model_name.human %>:</label>
+              <%= collection_select('search', 'category',
+                                    @categories, :id, :name,
+                                    { selected: @selected_category_id, include_blank: t('.action.all') },
+                                    { class: 'form-control ck-date-auto-width mx-1' }) %>
+              <%= submit_tag(t('.action.select', default: "Select"), class: 'btn btn-sm btn-primary my-1') %>
             </div>
           <% end %>
         </div>
-        <div class='col-sm-4 text-right'>
+        <div class='col-sm-3 text-right'>
           <%= link_to(new_purchase_path) do %>
             <span class="btn btn-primary"><%= t('.new_purchase') %></span>
           <% end %>
