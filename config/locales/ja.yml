@@ -7,6 +7,7 @@ view_common: &view_common
     delete: 削除
     back: 戻る
     next: 次へ
+    select: 選択
 
 ja:
   title: 家計簿
@@ -69,7 +70,6 @@ ja:
       <<: *view_common
       purchases: 取引記録
       new_purchase: 新規追加
-      select_month: 月選択
       no_data: データがありません
       confirm_delete: 削除しますか?
     new:

@@ -84,8 +84,8 @@ class PurchasesController < ApplicationController
     @search_date = if search_params.nil?
                      Time.zone.today
                    else
-                     @search_date = Date.new(search_params[:"date(1i)"].to_i,
-                                             search_params[:"date(2i)"].to_i)
+                     @search_date = Date.new(search_params[:year].to_i,
+                                             search_params[:month].to_i)
                    end
     @search_category_id = search_params&.[](:category)
   end
