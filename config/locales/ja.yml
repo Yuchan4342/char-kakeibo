@@ -22,6 +22,7 @@ ja:
         bought_at: 日付
         name: 名前
         price: 金額
+        income: 収入ならチェック
       user:
         email: メールアドレス
         name: ユーザー名

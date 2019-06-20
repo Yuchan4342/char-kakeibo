@@ -12,6 +12,7 @@
 #  updated_at  :datetime         not null
 #  category_id :bigint
 #  user_id     :bigint
+#  income      :boolean          default(FALSE)
 #
 
 # Purchase model. 購入などの取引を表すモデル.

@@ -41,7 +41,7 @@
               <td><%= l(purchase.bought_at.to_date, format: :short_with_day) %></td>
               <td><%= purchase.category&.name %></td>
               <td><%= purchase.name %></td>
-              <td><%= number_to_currency(purchase.price) %></td>
+              <td><%= purchase.income ? '+' : '-' %><%= number_to_currency(purchase.price) %></td>
               <td>
                 <%= link_to(edit_purchase_path(purchase)) do %>
                 <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>

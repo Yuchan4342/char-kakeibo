@@ -43,6 +43,7 @@ en:
         bought_at: "Date"
         name: "Name"
         price: "Amount"
+        income: "Income?"
       user:
         email: "Email"
         name: "Username"
