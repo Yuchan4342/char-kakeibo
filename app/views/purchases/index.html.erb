@@ -22,6 +22,16 @@
           <% end %>
         </div>
       </div>
+      <div class="row my-2 text-center">
+        <div class="col-sm-12">
+          <h4>
+            <%# TODO: i18n 対応. %>
+            <span class="mr-2">収入計: <%= number_to_currency(@income) %></span>
+            <span class="mx-2">支出計: <%= number_to_currency(@spend) %></span>
+            <span class="ml-2">収支: <%= number_to_currency(@income - @spend) %></span>
+          </h4>
+        </div>
+      </div>
       <table class="table table-striped table-hover table-sm">
         <thead class="thead-light">
           <tr>

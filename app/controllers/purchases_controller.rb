@@ -14,6 +14,8 @@ class PurchasesController < ApplicationController
     @purchases = Purchase.where(user: current_user,
                                 bought_at: @search_date.in_time_zone.all_month)
                          .eager_load(:category).order('bought_at DESC')
+    @income = @purchases.select(&:income).sum(&:price)
+    @spend = @purchases.reject(&:income).sum(&:price)
   end
 
   def new
