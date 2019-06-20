@@ -12,6 +12,7 @@ class PurchasesController < ApplicationController
 
   def index
     @purchases = Purchase.where(user: current_user,
+                                category: @search_category_id,
                                 bought_at: @search_date.in_time_zone.all_month)
                          .eager_load(:category).order('bought_at DESC')
     @income = @purchases.select(&:income).sum(&:price)
@@ -86,6 +87,7 @@ class PurchasesController < ApplicationController
                      @search_date = Date.new(search_params[:"date(1i)"].to_i,
                                              search_params[:"date(2i)"].to_i)
                    end
+    @search_category_id = search_params&.[](:category)
   end
 
   def purchase_params
