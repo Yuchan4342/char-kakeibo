@@ -16,7 +16,7 @@
         </thead>
         <tbody>
           <% if @categories.count.zero? %>
-            <tr><td class='text-center' colspan='2'><%= t('.no_data' default: "No Data") %></td></tr>
+            <tr><td class='text-center' colspan='2'><%= t('.no_data', default: "No Data") %></td></tr>
           <% else %>
             <% @categories.each do |category| %>
               <tr>
