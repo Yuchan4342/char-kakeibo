@@ -3,14 +3,11 @@
 # PurchaseController
 # 購入 Purchase に関連する Controller.
 class PurchasesController < ApplicationController
-  include DefaultCategory
-
   before_action :authenticate_user!
   before_action :set_purchase, only: %i[edit update destroy]
   before_action :set_categories, only: [:index]
   before_action :set_search_date, only: [:index]
   before_action :set_selected_category, only: [:index]
-  before_action :create_default_category, only: %i[new edit]
 
   def index
     @purchases = Purchase.where(user: current_user,
