@@ -14,7 +14,11 @@ class PurchasesController < ApplicationController
                                 category: @search_category,
                                 bought_at: @range)
                          .eager_load(:category).order('bought_at DESC')
+    # 選択した月. 年間の場合は空文字列.
     @selected_month = @all_year ? '' : @search_date.month
+    # タイトル行で表示する文字列.
+    @title_month = l(@search_date, format: (@all_year ? :year : :month))
+    # 対象期間での収入/支出.
     @income = @purchases.select(&:income).sum(&:price)
     @spend = @purchases.reject(&:income).sum(&:price)
   end
