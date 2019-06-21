@@ -8,7 +8,8 @@ view_common: &view_common
     back: 戻る
     next: 次へ
     select: 選択
-    all: すべて
+  all: すべて
+  all_year: 年間
 
 ja:
   title: 家計簿
@@ -50,6 +51,7 @@ ja:
       top_menu: トップメニュー
       sign_in: サインイン
       sign_up: 新規登録
+      new_purchase: 新しい取引の追加
   categories:
     index:
       <<: *view_common
@@ -120,6 +122,7 @@ ja:
     formats:
       default: "%Y/%m/%d"
       long: "%Y年%m月%d日(%a)"
+      year: "%Y年"
       month: "%Y年%m月"
       short_with_day: "%m/%d(%a)"
       short: "%m/%d"

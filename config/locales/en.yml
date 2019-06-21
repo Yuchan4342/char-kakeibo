@@ -39,7 +39,7 @@ view_common: &view_common
     back: "Back"
     next: "Next"
     select: "Select"
-    all: "All"
+  all: "All"
 
 en:
   title: "Kakeibo"
@@ -122,6 +122,7 @@ en:
     formats:
       default: "%Y-%m-%d"
       long: "%B %d, %Y"
+      year: "%Y"
       month: "%B %Y"
       short_with_day: "%a, %b %d"
       short: "%b %d"

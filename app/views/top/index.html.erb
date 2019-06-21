@@ -9,6 +9,9 @@
           <ul>
             <li>普段の買い物などの収入や支出を記録して見ることができます。</li>
           </ul>
+          <%= link_to(new_purchase_path) do %>
+            <span class="btn btn-primary my-2"><%= t('.new_purchase', default: 'New Purchase') %></span>
+          <% end %>
           <li><%= link_to(Category.model_name.human, categories_path) %></li>
           <ul>
             <li>カテゴリーを登録して、収入や支出を分類することができます。</li>

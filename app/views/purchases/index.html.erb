@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2><%= t('.purchases') << ' ' << l(@search_date, format: :month) %></h2>
+      <h2>
+        <%= t('.purchases') %>
+        <%= @title_month %>
+      </h2>
       <div class="row my-2">
         <div class="col-sm-9">
           <%= form_tag(purchases_path, method: 'get', class: 'form-horizontal') do %>
@@ -11,12 +14,12 @@
                          { class: 'form-control ck-date-auto-width' }) %>
               <label class='mx-1'>/</label>
               <%= select('search', 'month',
-                         (1..12), { selected: @search_date.month },
+                         (1..12), { selected: @selected_month, include_blank: t('.all_year', default: "All") },
                          { class: 'form-control ck-date-auto-width' }) %>
               <label class='ml-2'><%= Category.model_name.human %>:</label>
               <%= collection_select('search', 'category',
                                     @categories, :id, :name,
-                                    { selected: @selected_category_id, include_blank: t('.action.all') },
+                                    { selected: @selected_category_id, include_blank: t('.all') },
                                     { class: 'form-control ck-date-auto-width mx-1' }) %>
               <%= submit_tag(t('.action.select', default: "Select"), class: 'btn btn-sm btn-primary my-1') %>
             </div>

@@ -9,7 +9,7 @@ Web application to register and watch what you have bought and how much you have
 - カテゴリー(費目)の追加・削除
 - カテゴリー別のデータの表示・集計
   - 集計: 表示されている表データの収入・支出の合計を計算して表示
-- 月ごとのデータの表示・集計
+- 月ごと/年間のデータの表示・集計
 - ユーザ・ログイン機能
 
 ## To start / 始め方
