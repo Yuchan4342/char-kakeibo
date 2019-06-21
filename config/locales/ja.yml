@@ -54,6 +54,7 @@ ja:
     index:
       <<: *view_common
       new_category: 新規作成
+      no_data: データがありません
     new:
       <<: *view_common
       new_category: 新しいカテゴリーの作成

@@ -15,18 +15,22 @@
           </tr>
         </thead>
         <tbody>
-          <% @categories.each do |category| %>
-            <tr>
-            <td><%= category.name %></td>
-            <td>
-              <%= link_to(edit_category_path(category)) do %>
-              <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
-              <% end %>
-              <%= link_to(category, method: :delete, data: { confirm: '削除しますか?' }) do %>
-              <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
-              <% end %>
-            </td>
-          </tr>
+          <% if @categories.count.zero? %>
+            <tr><td class='text-center' colspan='2'><%= t('.no_data' default: "No Data") %></td></tr>
+          <% else %>
+            <% @categories.each do |category| %>
+              <tr>
+              <td><%= category.name %></td>
+              <td>
+                <%= link_to(edit_category_path(category)) do %>
+                <span class="btn btn-sm btn-success"><%= t('.action.edit') %></span>
+                <% end %>
+                <%= link_to(category, method: :delete, data: { confirm: '削除しますか?' }) do %>
+                <span class="btn btn-sm btn-danger"><%= t('.action.delete') %></span>
+                <% end %>
+              </td>
+            </tr>
+            <% end %>
           <% end %>
         </tbody>
       </table>
