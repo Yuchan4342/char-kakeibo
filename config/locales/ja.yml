@@ -51,6 +51,7 @@ ja:
       top_menu: トップメニュー
       sign_in: サインイン
       sign_up: 新規登録
+      new_purchase: 新しい取引の追加
   categories:
     index:
       <<: *view_common
