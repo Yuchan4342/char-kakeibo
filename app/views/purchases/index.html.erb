@@ -16,7 +16,7 @@
               <label class='ml-2'><%= Category.model_name.human %>:</label>
               <%= collection_select('search', 'category',
                                     @categories, :id, :name,
-                                    { selected: @selected_category_id, include_blank: t('.action.all') },
+                                    { selected: @selected_category_id, include_blank: t('.all') },
                                     { class: 'form-control ck-date-auto-width mx-1' }) %>
               <%= submit_tag(t('.action.select', default: "Select"), class: 'btn btn-sm btn-primary my-1') %>
             </div>
