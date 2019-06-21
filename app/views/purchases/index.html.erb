@@ -11,7 +11,7 @@
                          { class: 'form-control ck-date-auto-width' }) %>
               <label class='mx-1'>/</label>
               <%= select('search', 'month',
-                         (1..12), { selected: @search_date.month, include_blank: t('.all_year', default: "All") },
+                         (1..12), { selected: @selected_month, include_blank: t('.all_year', default: "All") },
                          { class: 'form-control ck-date-auto-width' }) %>
               <label class='ml-2'><%= Category.model_name.human %>:</label>
               <%= collection_select('search', 'category',

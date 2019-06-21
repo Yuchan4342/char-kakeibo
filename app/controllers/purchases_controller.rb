@@ -12,8 +12,9 @@ class PurchasesController < ApplicationController
   def index
     @purchases = Purchase.where(user: current_user,
                                 category: @search_category,
-                                bought_at: @search_date.in_time_zone.all_month)
+                                bought_at: @range)
                          .eager_load(:category).order('bought_at DESC')
+    @selected_month = @all_year ? '' : @search_date.month
     @income = @purchases.select(&:income).sum(&:price)
     @spend = @purchases.reject(&:income).sum(&:price)
   end
@@ -84,12 +85,27 @@ class PurchasesController < ApplicationController
   # パラメータから表示する年月を設定する. パラメータがない場合は今月のデータを表示.
   def set_search_date
     search_params = params[:search]
-    @search_date = if search_params.nil?
-                     Time.zone.today
-                   else
-                     Date.new(search_params[:year].to_i,
-                              search_params[:month].to_i)
-                   end
+    if search_params.nil?
+      @search_date = Time.zone.today
+      @all_year = false
+    else
+      # 年間指定の場合は 0が入る.
+      month = search_params[:month].to_i
+      @search_date = Date.new(search_params[:year].to_i,
+                              (month.positive? ? month : 1))
+      # 年間指定なら true.
+      @all_year = month.zero?
+    end
+    set_date_range
+  end
+
+  # 表示する日付の範囲を設定.
+  def set_date_range
+    @range = if @all_year
+               @search_date.in_time_zone.all_year
+             else
+               @search_date.in_time_zone.all_month
+             end
   end
 
   # パラメータから表示するカテゴリーを設定する. パラメータがない場合は全カテゴリー.
