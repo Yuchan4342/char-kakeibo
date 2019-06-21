@@ -7,7 +7,6 @@ class CategoriesController < ApplicationController
 
   before_action :authenticate_user!
   before_action :set_category, only: %i[edit update destroy]
-  before_action :create_default_category, only: %i[index]
 
   def index
     @categories = Category.where(user: current_user)

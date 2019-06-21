@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   root to: 'top#index'
   resources :purchases, except: :show
   resources :categories, except: :show
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
 end
