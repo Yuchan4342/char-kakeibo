@@ -3,8 +3,6 @@
 # CategoriesController
 # カテゴリー Categories に関連する Controller.
 class CategoriesController < ApplicationController
-  include DefaultCategory
-
   before_action :authenticate_user!
   before_action :set_category, only: %i[edit update destroy]
 
