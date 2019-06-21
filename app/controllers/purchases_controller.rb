@@ -10,7 +10,7 @@ class PurchasesController < ApplicationController
   before_action :set_categories, only: [:index]
   before_action :set_search_date, only: [:index]
   before_action :set_selected_category, only: [:index]
-  before_action :create_default_category, only: %i[new edit]
+  before_action :create_default_category, only: %i[index new edit]
 
   def index
     @purchases = Purchase.where(user: current_user,
