@@ -274,7 +274,6 @@ DEPENDENCIES
   rack-rewrite
   rails (~> 5.2.3)
   rails-erd
-  rubocop
   rubocop-rails
   sass-rails (~> 5.0)
   simple_form
