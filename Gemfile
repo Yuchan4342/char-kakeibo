@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -55,7 +55,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   # rubocop コード規約に則っているかチェック.
-  gem 'rubocop', require: false
   gem 'rubocop-rails', require: false
   # Solargraph for Ruby (http://solargraph.org)
   gem 'solargraph', require: false
