@@ -4,6 +4,8 @@
   "recommendations": [
       // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
       "rebornix.ruby",
-      "vscode-icons-team.vscode-icons"
+      "wayou.vscode-todo-highlight",
+      "vscode-icons-team.vscode-icons",
+      "editorconfig.editorconfig"
   ]
 }
