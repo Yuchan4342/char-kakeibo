@@ -28,7 +28,17 @@ module CharKakeibo
     # the framework and any gems in your application.
 
     # Don't generate system test files.
-    config.generators.system_tests = nil
+    # config.generators.system_tests = nil
+
+    # Rspec test settings.
+    # rails generation で生成される rspec ファイルを設定.
+    config.generators do |g|
+      g.test_framework :rspec, 
+            view_specs: false, 
+            helper_specs: false, 
+            controller_specs: true, 
+            routing_specs: false
+    end
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
