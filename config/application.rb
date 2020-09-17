@@ -37,7 +37,8 @@ module CharKakeibo
             view_specs: false, 
             helper_specs: false, 
             controller_specs: true, 
-            routing_specs: false
+            routing_specs: false,
+            request_specs: false
     end
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
